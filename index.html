@@ -22,136 +22,135 @@
                 </div>
                 <div class="navbar-end">
                     <a id="blog" class="btn btn-sm border-0 px-5 bg-sky-500 hover:bg-sky-700 rounded-md text-white ">Blog</a>
+                    
+                    <div id="convertToMiter" class="">
+                        <button class="btn btn-xs bg-sky-500 border-0 hover:bg-sky-700">Convert To M<sup>2</sup></button>
+                    </div>
                 </div>
             </div>
         </header>
         <main>
-            <section class="flex gap-4 mx-5">
-                <div class="my-6 w-[70%] mx-auto grid gap-4 grid-cols-1 lg:grid-cols-3">
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+            <section  class="flex flex-col lg:flex-row gap-4 mx-5">
+                <div class="my-6 w-full lg:w-[70%] mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div id="triangleBg" class="card w-full bg-pink-300 shadow-xl border pt-5">
                         <figure><img class="" src="images/triangle.png" alt="Triangle"/></figure>
-                        <div class="card-body text-center">
+                        <div id="test" class="bg card-body text-center">
                             <div class="">
-                                <h2 id="shapeName" class="card-title justify-center mb-2">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
+                                <h2 id="triangleName" class="card-title justify-center mb-2">Triangle</h2>
+                                <p class="mb-6">Area (A) = 0.5 X b X h</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="triangleLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="triangleLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs font-semibold" />
                                 <span class="mx-2">cm</span>
                                 <input id="triangleRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
+                                <button id="triangleBtn" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rectangleBg" class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img class="" src="images/rectangle.png" alt="Rectangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 id="rectangleName" class="card-title justify-center mb-2">Rectangle</h2>
+                                <p class="mb-6">Area (A) = W X L</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input id="rectangleLeft" type="text" placeholder="w" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input id="rectangleRight" type="text" placeholder="l" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button id="rectangleBtn" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="parallelogramBg" class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img class="" src="images/parallelogram.png" alt="Parallelogram"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 id="shapeName" class="card-title justify-center mb-2">Parallelogram</h2>
+                                <p>Area (A) = b X h</p>
+                                <p>b = 10cm, h = 12cm</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input id="parallelogramLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input id="parallelogramRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
                                 <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
-                                <div id="convertToMiter" class="">
-                                    <button class="btn btn-xs bg-sky-500 border-0 hover:bg-sky-700">Convert To M<sup>2</sup></button>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                    <div id="rhombusBg" class="card w-full bg-sky-300 shadow-xl border pt-5">
+                        <figure><img class="" src="images/rhombus.png" alt="Rhombus"/></figure>
                         <div class="card-body text-center">
                             <div class="">
-                                <h2 class="card-title justify-center">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
+                                <h2 id="shapeName" class="card-title justify-center mb-2">Rhombus</h2>
+                                <p>Area (A) = 0.5 X d<sub>1</sub>  X d<sub>2</sub></p>
+                                <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="rhombusLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
-                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="rhombusRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                    <div id="pentagonBg" class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img class="" src="images/pentagon.png" alt="Pentagon"/></figure>
                         <div class="card-body text-center">
                             <div class="">
-                                <h2 class="card-title justify-center">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
+                                <h2 id="shapeName" class="card-title justify-center mb-2">Pentagon</h2>
+                                <p>Area (A) = 0.5 X p X b</p>
+                                <p>p = 6cm, b = 10cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="pentagonLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
-                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="pentagonRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                    <div id="ellipseBg" class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img class="" src="images/ellipse.png" alt="Ellipse"/></figure>
                         <div class="card-body text-center">
                             <div class="">
-                                <h2 class="card-title justify-center">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
+                                <h2 id="shapeName" class="card-title justify-center mb-2">Ellipse</h2>
+                                <p>Area (A) = pi&; ab</p>
+                                <p>a = 10cm, b = 4cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="ellipseLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
-                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input id="ellipseRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
-                        <div class="card-body text-center">
-                            <div class="">
-                                <h2 class="card-title justify-center">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
-                            </div>
-                            <div class="flex my-3">
-                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
-                                <span class="mx-2">cm</span>
-                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
-                                <span class="mx-2">cm</span>
-                            </div>
-                            <div class="card-actions justify-end">
-                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
-                        <div class="card-body text-center">
-                            <div class="">
-                                <h2 class="card-title justify-center">Triangle</h2>
-                                <p>Area (A) = 0.5 X b X h</p>
-                            </div>
-                            <div class="flex my-3">
-                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
-                                <span class="mx-2">cm</span>
-                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
-                                <span class="mx-2">cm</span>
-                            </div>
-                            <div class="card-actions justify-end">
-                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-[28%] my-6 rounded-lg mx-auto">
+                <div class="w-full lg:w-[28%] my-6 rounded-lg mx-auto border">
                     <div class="text-center">
-                        <h1 class="text-2xl font-bold underline">Aria Calculate</h1>
+                        <h1 class="text-2xl font-bold underline py-3">Aria Calculate</h1>
                         <div class="overflow-x-auto">
                             <table  class="table w-full">
-                              <tbody id="tableContainer">
-                                <tr>
-                                  <th>1</th>
-                                  <td>2</td>
-                                  <td>3</td>
-                                  <td>4</td>
-                                </tr>
+                              <tbody id="tableContainer" class="font-semibold">
                               </tbody>
                             </table>
                           </div>
