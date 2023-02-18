@@ -1,152 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Interactive Geometry Genius</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+            rel="stylesheet"
+            type="text/css"/>
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://kit.fontawesome.com/89f4ef6ec9.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="">
-            <div class="bg-sky-100 rounded-md flex justify-between px-10 py-4 w-11/12 mx-auto">
-                <div class="">
-                    <h2 class="font-bold text-4xl text-slate-700">Interactive</h2>
-                    <h4 class="font-semibold text-2xl text-slate-500">Geometry Genius</h4>
+        <header class="bg-sky-100">
+            <div class="navbar px-6 mx-auto">
+                <div class="navbar-start">
+                    <div class="">
+                        <h2 class="text-slate-700 font-bold text-4xl">Interactive</h2>
+                        <h4 class="text-slate-700 font-semibold text-2xl">Geometry Genius</h4>
+                    </div>
                 </div>
-                <div class="self-center">
-                    <button id="blog" class="bg-sky-500 py-1 px-6 font-bold text-white rounded-md border-0">Blog</button>
+                <div class="navbar-end">
+                    <a id="blog" class="btn btn-sm border-0 px-5 bg-sky-500 hover:bg-sky-700 rounded-md text-white ">Blog</a>
                 </div>
             </div>
         </header>
-        <main class="w-11/12 mx-auto">
-            <section>
-                <div class="gap-4 grid grid-cols-4 my-5">
-                    <div class="bg-pink-200 rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/triangle.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Triangle</h3>
-                            <p class="">Area (A) = 0.5 X b X h</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input id="bottom" class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="b">
-                            <span>cm</span>
-                            <input id="hight" class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="h">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="triangle" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
-                        </div>
-                    </div>
-                    <div class="rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/rectangle.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Rectangle</h3>
-                            <p class="">Area (A) = W X L</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="w">
-                            <span>cm</span>
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="l">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="rectangle" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
+        <main>
+            <section class="flex gap-4 mx-5">
+                <div class="my-6 w-[70%] mx-auto grid gap-4 grid-cols-1 lg:grid-cols-3">
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img class="" src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 id="shapeName" class="card-title justify-center mb-2">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input id="triangleLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input id="triangleRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <div id="convertToMiter" class="">
+                                    <button class="btn btn-xs bg-sky-500 border-0 hover:bg-sky-700">Convert To M<sup>2</sup></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/parallelogram.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Parallelogram</h3>
-                            <p class="">Area (A) = b X h</p>
-                            <p class="">b = 10cm, h = 12cm</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="b">
-                            <span>cm</span>
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="h">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="parallelogram" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 class="card-title justify-center">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <h4 class="font-bold underline">Area Calculation</h4>
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 class="card-title justify-center">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 class="card-title justify-center">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 class="card-title justify-center">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w-full bg-base-100 shadow-xl border pt-5">
+                        <figure><img src="images/triangle.png" alt="Triangle"/></figure>
+                        <div class="card-body text-center">
+                            <div class="">
+                                <h2 class="card-title justify-center">Triangle</h2>
+                                <p>Area (A) = 0.5 X b X h</p>
+                            </div>
+                            <div class="flex my-3">
+                                <input type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                                <input type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <span class="mx-2">cm</span>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn bg-sky-500 border-0 hover:bg-sky-700 w-full text-lg">Calculate</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="gap-4 grid grid-cols-4 my-5">
-                    <div class="bg-sky-300 rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/rhombus.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Rhombus</h3>
-                            <p class="">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
-                            <p>d<sub>1</sub> = 16cm, d<sub>2</sub>  = 8cm</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="b">
-                            <span>cm</span>
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="h">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="rhombus" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
-                        </div>
-                    </div>
-                    <div class="rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/pentagon.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Pentagon</h3>
-                            <p class="">Area (A) = 0.5 X p X b</p>
-                            <p class="">p = 6cm, b = 10cm</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="b">
-                            <span>cm</span>
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="h">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="pentagon" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
-                        </div>
-                    </div>
-                    <div class="rounded border border-gray-200 p-6 text-center">
-                        <div class="my-5">
-                            <img src="images/ellipse.png" alt="">
-                        </div>
-                        <div class="my-5">
-                            <h3 class="font-bold">Ellipse</h3>
-                            <p class="">Area (A) = <i class="fa-solid fa-pi"></i>ab</p>
-                            <p class="">a = 10cm, b = 4cm</p>
-                        </div>
-                        <div class="flex justify-center my-6">
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="b">
-                            <span>cm</span>
-                            <input class="w-20 rounded px-2 mx-2" type="number" name="" id="" placeholder="h">
-                            <span>cm</span>
-                        </div>
-                        <div class="my-6">
-                            <button id="ellipse" class="bg-sky-500 text-white font-bold rounded-md w-full py-2">Calculate</button>
-                        </div>
+                <div class="w-[28%] my-6 rounded-lg mx-auto">
+                    <div class="text-center">
+                        <h1 class="text-2xl font-bold underline">Aria Calculate</h1>
+                        <div class="overflow-x-auto">
+                            <table  class="table w-full">
+                              <tbody id="tableContainer">
+                                <tr>
+                                  <th>1</th>
+                                  <td>2</td>
+                                  <td>3</td>
+                                  <td>4</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                     </div>
                 </div>
             </section>
         </main>
-        <script src="js/blog.js"></script>
-        <script src="js/triangle.js"></script>
-        <script src="js/tailwind.config.js"></script>
+        <script src="js/geometry.js"></script>
     </body>
 </html>
