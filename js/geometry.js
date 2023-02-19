@@ -1,9 +1,7 @@
 // for Blog Page
-document
-    .getElementById('blog')
-    .addEventListener('click', function () {
-        window.location.href = '/blog.html'
-    })
+document.getElementById('blog').addEventListener('click', function(){
+    window.location.href = '/blog.html'
+})
 
 function inputLeftValue(inputLeft){
     const inputLeftField = document.getElementById(inputLeft);
