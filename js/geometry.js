@@ -5,24 +5,38 @@ document
         window.location.href = '/blog.html'
     })
 
+function inputLeftValue(inputLeft){
+    const inputLeftField = document.getElementById(inputLeft);
+    const inputLeftValue = inputLeftField.value;
+    const inputLeftValueStrToInt = parseFloat(inputLeftValue);
+    inputLeftField.value = '';
+    return inputLeftValueStrToInt;
+}
+function inputRightValue(inputRight){
+    const inputRightField = document.getElementById(inputRight);
+    const inputRightValue = inputRightField.value;
+    const inputRightValueStrToInt = parseFloat(inputRightValue);
+    inputRightField.value = '';
+    return inputRightValueStrToInt;
+}
+function convertBtn(convertToMiter){
+    // get button
+    const getBtn = document.getElementById(convertToMiter).innerHTML;
+    return getBtn;
+}
+
 let serial = 0;
 // Triangle JS 
 document.getElementById('triangleBtn').addEventListener('click', function () {
         serial += 1;
         // get left input value
-        const inputLeftField = document.getElementById('triangleLeft');
-        const inputLeftValue = inputLeftField.value;
-        const inputLeftValueStrToInt = parseFloat(inputLeftValue);
-        inputLeftField.value = '';
+        const inputLeftField = inputLeftValue('triangleLeft');
 
         // get right input value
-        const inputRightField = document.getElementById('triangleRight');
-        const inputRightValue = inputRightField.value;
-        const inputRightValueStrToInt = parseFloat(inputRightValue);
-        inputRightField.value = '';
+        const inputRightField = inputRightValue('triangleRight');
 
         // input value calculate
-        const getCalculateValue = inputLeftValueStrToInt * inputRightValueStrToInt * 0.5;
+        const getCalculateValue = inputLeftField * inputRightField * 0.5;
         const result = parseInt(getCalculateValue);
 
         // get shape name
@@ -31,9 +45,7 @@ document.getElementById('triangleBtn').addEventListener('click', function () {
             .innerText;
 
         // get button
-        const getBtn = document
-            .getElementById('convertToMiter')
-            .innerHTML;
+        const getBtn = convertBtn('convertToMiter');
 
         // arguments
         createElementData(serial, getHeaderName, result, getBtn);
@@ -43,19 +55,13 @@ document.getElementById('triangleBtn').addEventListener('click', function () {
 document.getElementById('rectangleBtn').addEventListener('click', function () {
         serial += 1;
         // get left input value
-        const inputLeftField = document.getElementById('rectangleLeft');
-        const inputLeftValue = inputLeftField.value;
-        const inputLeftValueStrToInt = parseFloat(inputLeftValue);
-        inputLeftField.value = '';
+        const inputLeftField = inputLeftValue('rectangleLeft');
 
         // get right input value
-        const inputRightField = document.getElementById('rectangleRight');
-        const inputRightValue = inputRightField.value;
-        const inputRightValueStrToInt = parseFloat(inputRightValue);
-        inputRightField.value = '';
+        const inputRightField = inputRightValue('rectangleRight');
 
         // input value calculate
-        const getCalculateValue = inputLeftValueStrToInt * inputRightValueStrToInt;
+        const getCalculateValue = inputLeftField * inputRightField;
         const result = parseInt(getCalculateValue);
 
         // get shape name
@@ -72,6 +78,60 @@ document.getElementById('rectangleBtn').addEventListener('click', function () {
         createElementData(serial, getHeaderName, result, getBtn);
     })
 
+// Parallelogram JS 
+document.getElementById('btnParallelogram').addEventListener('click', function () {
+        serial += 1;
+        // get left input value
+        const inputLeftField = inputLeftValue('parallelogramLeft');
+
+        // get right input value
+        const inputRightField = inputRightValue('parallelogramRight');
+
+        // input value calculate
+        const getCalculateValue = inputLeftField * inputRightField;
+        const result = parseInt(getCalculateValue);
+
+        // get shape name
+        const getHeaderName = document
+            .getElementById('parallelogramName')
+            .innerText;
+
+        // get button
+        const getBtn = document
+            .getElementById('convertToMiter')
+            .innerHTML;
+
+        // arguments
+        createElementData(serial, getHeaderName, result, getBtn);
+    })
+
+
+// Rhombus JS 
+document.getElementById('btnRhombus').addEventListener('click', function () {
+        serial += 1;
+        // get left input value
+        const inputLeftField = inputLeftValue('rhombusLeft');
+
+        // get right input value
+        const inputRightField = inputRightValue('rhombusRight');
+
+        // input value calculate
+        const getCalculateValue = inputLeftField * inputRightField;
+        const result = parseInt(getCalculateValue);
+
+        // get shape name
+        const getHeaderName = document
+            .getElementById('rhombusName')
+            .innerText;
+
+        // get button
+        const getBtn = document
+            .getElementById('convertToMiter')
+            .innerHTML;
+
+        // arguments
+        createElementData(serial, getHeaderName, result, getBtn);
+    })
 
 
 function createElementData(serial, getHeaderName, result, getBtn) {
