@@ -1,41 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header class="">
-        <div class="bg-sky-100 rounded-md px-10 py-4 w-11/12 mx-auto">
-            <div class="text-center">
-                <h2 class="font-bold text-4xl text-slate-700">Welcome to our <span class="text-fuchsia-500">Geometry Genius</span> Blog</h2>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+            rel="stylesheet"
+            type="text/css"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <header class="">
+            <div class="bg-sky-100 rounded-md px-10 py-4 w-11/12 mx-auto">
+                <div class="text-center">
+                    <h2 class="font-bold text-4xl text-slate-700">Welcome to our
+                        <span class="text-fuchsia-500">Geometry Genius</span>
+                        Blog</h2>
+                </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <section class="w-11/12 mx-auto">
-            <div class="bg-violet-300 p-5 my-3 rounded">
-                <h2 class="font-bold text-2xl">1st Question :: What is DOM? What is the purpose of DOM?</h2>
-                <p class="font-bold">Answer :: Hello</p>
-            </div>
-            <div class="bg-pink-300 p-5 my-3 rounded">
-                <h2 class="font-bold text-2xl">2nd Question :: How to select HTML element using by DOM?</h2>
-                <p class="font-bold">Answer :: Hello</p>
-            </div>
-            <div class="bg-green-300 p-5 my-3 rounded">
-                <h2 class="font-bold text-2xl">3rd Question :: What is even bubble?</h2>
-                <p class="font-bold">Answer :: Hello</p>
-            </div>
-            <div class="bg-orange-300 p-5 my-3 rounded">
-                <h2 class="font-bold text-2xl">4th Question :: What is callback function? Why we can use this?</h2>
-                <p class="font-bold">Answer :: Hello</p>
-            </div>
-        </section>
-    </main>
-    <script src="js/blog.js"></script>
-    <script src="js/tailwind.config.js"></script>
-</body>
+        </header>
+        <main>
+            <section class="w-11/12 mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+                    <div class="card w-full shadow-xl bg-violet-300 p-5 rounded">
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-2xl">1st Question :: What is DOM? What is the purpose of DOM?</h2>
+                            <hr class="border-black my-2">
+                            <p class="font-bold">Answer :: DOM means Document Object Model. We are use this
+                                for change any element from the web pages. We can also add events to these
+                                elements to make our page more dynamic. It is a programming interface that
+                                allows us to create, change, or remove elements from the web page.</p>
+                        </div>
+                    </div>
+                    <div class="card w-full shadow-xl bg-pink-300 p-5 rounded">
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-2xl">2nd Question :: How to select HTML element using by DOM?</h2>
+                            <hr class="border-black my-2">
+                            <p class="font-bold">Answer :: We can select HTML element using by DOM from our
+                                document in different ways through DOM
+                            </p>
+                            <p class="font-semibold">1. document.getElementById</p>
+                            <p class="font-semibold">2. document.getElementsByClassName</p>
+                            <p class="font-semibold">3. document.getElementsByName</p>
+                            <p class="font-semibold">4. document.getElementsByTagName</p>
+                            <p class="font-semibold">5. document.querySelector</p>
+                            <p class="font-semibold">6. document.querySelectorAll</p>
+                        </div>
+                    </div>
+                    <div class="card w-full shadow-xl bg-green-300 p-5 rounded">
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-2xl">3rd Question :: What is even bubble?</h2>
+                            <hr class="border-black my-2">
+                            <p class="font-bold">Answer :: When we puss anu argument to document then this
+                                argument execute children by children. After the complete, then back to parent
+                                by parent to document. If you see when we throw a stone in water, the stone goes
+                                under the water, when it goes under the water, the air goes with the stone
+                                during this throw, and then the air comes back up as a bubble.</p>
+                        </div>
+                    </div>
+                    <div class="card w-full shadow-xl bg-orange-300 p-5 rounded">
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-2xl">4th Question :: What is callback function? Why we can use this?</h2>
+                            <hr class="border-black my-2">
+                            <p class="font-bold">Answer :: The callback function is the function we can use
+                                repeatedly in our document. Any function that is passed as an argument to
+                                another function so that it can be executed in that other function is called a
+                                callback function. We can create a function in a specific place and use that
+                                function repeatedly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="js/blog.js"></script>
+        <script src="js/tailwind.config.js"></script>
+    </body>
 </html>
