@@ -177,8 +177,9 @@ document.getElementById('btnEllipse').addEventListener('click', function () {
         const inputRightField = inputRightValue('ellipseRight');
 
         // input value calculate
-        const getCalculateValue = inputLeftField * inputRightField * 3.141;
-        const result = parseInt(getCalculateValue);
+        const getCalculateValue = inputLeftField * inputRightField * 3.14;
+        const toFixedResult = parseFloat(getCalculateValue);
+        const result = toFixedResult.toFixed(2);
 
         if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
             alert("Please input positive number.")
@@ -213,11 +214,32 @@ function createElementData(serial, getHeaderName, result) {
 }
 
 // random background color
-document.getElementById('triangleBg').addEventListener('mouseover', function random_bg_color() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    document.getElementById('triangleBg').style.background = bgColor;
-    }
-)
+document.getElementById('triangleBg').addEventListener('mouseover', function triangleBg(){
+    let triangleBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('triangleBg').style.background = '#'+ triangleBg;
+})
+
+document.getElementById('rectangleBg').addEventListener('mouseover', function rectangleBg(){
+    let rectangleBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('rectangleBg').style.background = '#'+ rectangleBg;
+})
+
+document.getElementById('parallelogramBg').addEventListener('mouseover', function parallelogramBg(){
+    let parallelogramBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('parallelogramBg').style.background = '#'+ parallelogramBg;
+})
+
+document.getElementById('rhombusBg').addEventListener('mouseover', function rhombusBg(){
+    let rhombusBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('rhombusBg').style.background = '#'+ rhombusBg;
+})
+
+document.getElementById('pentagonBg').addEventListener('mouseover', function pentagonBg(){
+    let pentagonBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('pentagonBg').style.background = '#'+ pentagonBg;
+})
+
+document.getElementById('ellipseBg').addEventListener('mouseover', function ellipseBg(){
+    let ellipseBg = Math.round(Math.random() * 1000000); 
+    document.getElementById('ellipseBg').style.background = '#'+ ellipseBg;
+})
