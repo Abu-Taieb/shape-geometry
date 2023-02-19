@@ -22,18 +22,14 @@
                 </div>
                 <div class="navbar-end">
                     <a id="blog" class="btn btn-sm border-0 px-5 bg-sky-500 hover:bg-sky-700 rounded-md text-white ">Blog</a>
-                    
-                    <div id="convertToMiter" class="">
-                        <button class="btn btn-xs bg-sky-500 border-0 hover:bg-sky-700">Convert To M<sup>2</sup></button>
-                    </div>
                 </div>
             </div>
         </header>
         <main>
             <section  class="flex flex-col lg:flex-row gap-4 mx-4">
-                <div class="my-6 w-full lg:w-[68%] mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="my-6 w-full lg:w-[70%] mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <div id="triangleBg" class="card w-full bg-pink-300 shadow-xl border pt-5">
-                        <figure><img class="" src="images/triangle.png" alt="Triangle"/></figure>
+                        <figure><img class="h-24" src="images/triangle.png" alt="Triangle"/></figure>
                         <div id="test" class="bg card-body text-center">
                             <div class="">
                                 <h2 id="triangleName" class="card-title justify-center mb-2">Triangle</h2>
@@ -51,7 +47,7 @@
                         </div>
                     </div>
                     <div id="rectangleBg" class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img class="" src="images/rectangle.png" alt="Rectangle"/></figure>
+                        <figure><img class="h-24" src="images/rectangle.png" alt="Rectangle"/></figure>
                         <div class="card-body text-center">
                             <div class="">
                                 <h2 id="rectangleName" class="card-title justify-center mb-2">Rectangle</h2>
@@ -69,7 +65,7 @@
                         </div>
                     </div>
                     <div id="parallelogramBg" class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img class="" src="images/parallelogram.png" alt="Parallelogram"/></figure>
+                        <figure><img class="h-24" src="images/parallelogram.png" alt="Parallelogram"/></figure>
                         <div class="card-body text-center">
                             <div class="">
                                 <h2 id="parallelogramName" class="card-title justify-center mb-2">Parallelogram</h2>
@@ -88,7 +84,7 @@
                         </div>
                     </div>
                     <div id="rhombusBg" class="card w-full bg-sky-300 shadow-xl border pt-5">
-                        <figure><img class="" src="images/rhombus.png" alt="Rhombus"/></figure>
+                        <figure><img class="h-24" src="images/rhombus.png" alt="Rhombus"/></figure>
                         <div class="card-body text-center">
                             <div class="">
                                 <h2 id="rhombusName" class="card-title justify-center mb-2">Rhombus</h2>
@@ -107,10 +103,10 @@
                         </div>
                     </div>
                     <div id="pentagonBg" class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img class="" src="images/pentagon.png" alt="Pentagon"/></figure>
+                        <figure><img class="h-24" src="images/pentagon.png" alt="Pentagon"/></figure>
                         <div class="card-body text-center">
                             <div class="">
-                                <h2 id="shapeName" class="card-title justify-center mb-2">Pentagon</h2>
+                                <h2 id="pentagonName" class="card-title justify-center mb-2">Pentagon</h2>
                                 <p>Area (A) = 0.5 X p X b</p>
                                 <p>p = 6cm, b = 10cm</p>
                             </div>
@@ -121,16 +117,16 @@
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button id="btnPentagon" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
                     <div id="ellipseBg" class="card w-full bg-base-100 shadow-xl border pt-5">
-                        <figure><img class="" src="images/ellipse.png" alt="Ellipse"/></figure>
+                        <figure><img class="h-24" src="images/ellipse.png" alt="Ellipse"/></figure>
                         <div class="card-body text-center">
                             <div class="">
-                                <h2 id="shapeName" class="card-title justify-center mb-2">Ellipse</h2>
-                                <p>Area (A) = pi&; ab</p>
+                                <h2 id="ellipseName" class="card-title justify-center mb-2">Ellipse</h2>
+                                <p>Area (A) = &pi;ab</p>
                                 <p>a = 10cm, b = 4cm</p>
                             </div>
                             <div class="flex my-3">
@@ -140,20 +136,20 @@
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnCalculate" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button id="btnEllipse" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-full lg:w-[32%] my-6 rounded-lg mx-auto border">
+                <div class="w-full lg:w-[30%] my-6 rounded-lg mx-auto border">
                     <div class="text-center">
                         <h1 class="text-2xl font-bold underline py-3">Aria Calculate</h1>
                         <div class="overflow-x-auto">
-                            <table  class="table w-full">
+                            <table class="table w-full">
                               <tbody id="tableContainer" class="font-semibold">
                               </tbody>
                             </table>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </section>

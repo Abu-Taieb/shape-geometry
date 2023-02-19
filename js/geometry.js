@@ -10,19 +10,23 @@ function inputLeftValue(inputLeft){
     const inputLeftValue = inputLeftField.value;
     const inputLeftValueStrToInt = parseFloat(inputLeftValue);
     inputLeftField.value = '';
+    if(isNaN(inputLeftValue)){
+        return false;
+    }
     return inputLeftValueStrToInt;
+
 }
 function inputRightValue(inputRight){
     const inputRightField = document.getElementById(inputRight);
     const inputRightValue = inputRightField.value;
     const inputRightValueStrToInt = parseFloat(inputRightValue);
     inputRightField.value = '';
+
+    if(isNaN(inputRightValue)){
+        return false;
+    }
     return inputRightValueStrToInt;
-}
-function convertBtn(convertToMiter){
-    // get button
-    const getBtn = document.getElementById(convertToMiter).innerHTML;
-    return getBtn;
+
 }
 
 let serial = 0;
@@ -39,16 +43,18 @@ document.getElementById('triangleBtn').addEventListener('click', function () {
         const getCalculateValue = inputLeftField * inputRightField * 0.5;
         const result = parseInt(getCalculateValue);
 
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
+
         // get shape name
         const getHeaderName = document
             .getElementById('triangleName')
             .innerText;
 
-        // get button
-        const getBtn = convertBtn('convertToMiter');
-
         // arguments
-        createElementData(serial, getHeaderName, result, getBtn);
+        createElementData(serial, getHeaderName, result);
     })
 
 // Rectangle JS 
@@ -64,18 +70,18 @@ document.getElementById('rectangleBtn').addEventListener('click', function () {
         const getCalculateValue = inputLeftField * inputRightField;
         const result = parseInt(getCalculateValue);
 
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
+
         // get shape name
         const getHeaderName = document
             .getElementById('rectangleName')
             .innerText;
 
-        // get button
-        const getBtn = document
-            .getElementById('convertToMiter')
-            .innerHTML;
-
         // arguments
-        createElementData(serial, getHeaderName, result, getBtn);
+        createElementData(serial, getHeaderName, result);
     })
 
 // Parallelogram JS 
@@ -91,18 +97,18 @@ document.getElementById('btnParallelogram').addEventListener('click', function (
         const getCalculateValue = inputLeftField * inputRightField;
         const result = parseInt(getCalculateValue);
 
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
+
         // get shape name
         const getHeaderName = document
             .getElementById('parallelogramName')
             .innerText;
 
-        // get button
-        const getBtn = document
-            .getElementById('convertToMiter')
-            .innerHTML;
-
         // arguments
-        createElementData(serial, getHeaderName, result, getBtn);
+        createElementData(serial, getHeaderName, result);
     })
 
 
@@ -116,25 +122,80 @@ document.getElementById('btnRhombus').addEventListener('click', function () {
         const inputRightField = inputRightValue('rhombusRight');
 
         // input value calculate
-        const getCalculateValue = inputLeftField * inputRightField;
+        const getCalculateValue = inputLeftField * inputRightField * 0.5;
         const result = parseInt(getCalculateValue);
+
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
 
         // get shape name
         const getHeaderName = document
             .getElementById('rhombusName')
             .innerText;
 
-        // get button
-        const getBtn = document
-            .getElementById('convertToMiter')
-            .innerHTML;
+        // arguments
+        createElementData(serial, getHeaderName, result);
+    })
+
+// Pentagon JS 
+document.getElementById('btnPentagon').addEventListener('click', function () {
+        serial += 1;
+        // get left input value
+        const inputLeftField = inputLeftValue('pentagonLeft');
+
+        // get right input value
+        const inputRightField = inputRightValue('pentagonRight');
+
+        // input value calculate
+        const getCalculateValue = inputLeftField * inputRightField * 0.5;
+        const result = parseInt(getCalculateValue);
+
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
+
+        // get shape name
+        const getHeaderName = document
+            .getElementById('pentagonName')
+            .innerText;
 
         // arguments
-        createElementData(serial, getHeaderName, result, getBtn);
+        createElementData(serial, getHeaderName, result);
     })
 
 
-function createElementData(serial, getHeaderName, result, getBtn) {
+// Ellipse JS 
+document.getElementById('btnEllipse').addEventListener('click', function () {
+        serial += 1;
+        // get left input value
+        const inputLeftField = inputLeftValue('ellipseLeft');
+
+        // get right input value
+        const inputRightField = inputRightValue('ellipseRight');
+
+        // input value calculate
+        const getCalculateValue = inputLeftField * inputRightField * 3.141;
+        const result = parseInt(getCalculateValue);
+
+        if(isNaN(inputRightField) || inputRightField == "" || inputLeftField =="" || inputRightField <=0 || inputLeftField <=0 ){
+            alert("Please input positive number.")
+            return false;
+        }
+
+        // get shape name
+        const getHeaderName = document
+            .getElementById('ellipseName')
+            .innerText;
+
+        // arguments
+        createElementData(serial, getHeaderName, result);
+    })
+
+
+function createElementData(serial, getHeaderName, result) {
     // get table container
     const getTable = document.getElementById('tableContainer');
 
@@ -145,7 +206,7 @@ function createElementData(serial, getHeaderName, result, getBtn) {
         <td>${serial + '. ' +
             getHeaderName}</td>
         <td>${result + 'cm'}<span><sup>2</sup></span></td>
-        <td>${getBtn}</td>
+        <td><button style="background:#0099e5; color:white; padding: 2px 5px; border-radius:2px; font-size:12px">Convert To M<sup>2</sup></button></td>
     </tr>
     `
     getTable.appendChild(tr)
@@ -160,4 +221,3 @@ document.getElementById('triangleBg').addEventListener('mouseover', function ran
     document.getElementById('triangleBg').style.background = bgColor;
     }
 )
-random_bg_color();
