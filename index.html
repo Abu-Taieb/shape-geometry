@@ -12,6 +12,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
+        <!-- // Header -->
         <header class="bg-sky-100">
             <div class="navbar px-6 mx-auto">
                 <div class="navbar-start">
@@ -21,13 +22,17 @@
                     </div>
                 </div>
                 <div class="navbar-end">
-                    <a id="blog" class="btn btn-sm border-0 px-5 bg-sky-500 hover:bg-sky-700 rounded-md text-white ">Blog</a>
+                    <a
+                        id="blog"
+                        class="btn btn-sm border-0 px-5 bg-sky-500 hover:bg-sky-700 rounded-md text-white ">Blog</a>
                 </div>
             </div>
         </header>
         <main>
-            <section  class="flex flex-col lg:flex-row gap-4 mx-4">
-                <div class="my-6 w-full lg:w-[70%] mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <section class="flex flex-col lg:flex-row gap-4 mx-4">
+                <div
+                    class="my-6 w-full lg:w-[70%] mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- // Card No 01 -->
                     <div id="triangleBg" class="card w-full bg-pink-300 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/triangle.png" alt="Triangle"/></figure>
                         <div id="test" class="bg card-body text-center">
@@ -36,16 +41,27 @@
                                 <p class="mb-6">Area (A) = 0.5 X b X h</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="triangleLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs font-semibold" />
+                                <input
+                                    id="triangleLeft"
+                                    type="text"
+                                    placeholder="b"
+                                    class="input input-bordered input-xs w-full max-w-xs font-semibold"/>
                                 <span class="mx-2">cm</span>
-                                <input id="triangleRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="triangleRight"
+                                    type="text"
+                                    placeholder="h"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="triangleBtn" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="triangleBtn"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
+                    <!-- // Card No 02 -->
                     <div id="rectangleBg" class="card w-full bg-base-100 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/rectangle.png" alt="Rectangle"/></figure>
                         <div class="card-body text-center">
@@ -54,16 +70,27 @@
                                 <p class="mb-6">Area (A) = W X L</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="rectangleLeft" type="text" placeholder="w" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="rectangleLeft"
+                                    type="text"
+                                    placeholder="w"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
-                                <input id="rectangleRight" type="text" placeholder="l" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="rectangleRight"
+                                    type="text"
+                                    placeholder="l"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="rectangleBtn" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="rectangleBtn"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
+                    <!-- // Card No 03 -->
                     <div id="parallelogramBg" class="card w-full bg-base-100 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/parallelogram.png" alt="Parallelogram"/></figure>
                         <div class="card-body text-center">
@@ -73,35 +100,61 @@
                                 <p>b = 10cm, h = 12cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="parallelogramLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="parallelogramLeft"
+                                    type="text"
+                                    placeholder="b"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
-                                <input id="parallelogramRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="parallelogramRight"
+                                    type="text"
+                                    placeholder="h"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnParallelogram" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="btnParallelogram"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
+                    <!-- // Card No 04 -->
                     <div id="rhombusBg" class="card w-full bg-sky-300 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/rhombus.png" alt="Rhombus"/></figure>
                         <div class="card-body text-center">
                             <div class="">
                                 <h2 id="rhombusName" class="card-title justify-center mb-2">Rhombus</h2>
-                                <p>Area (A) = 0.5 X d<sub>1</sub>  X d<sub>2</sub></p>
-                                <p>d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
+                                <p>Area (A) = 0.5 X d<sub>1</sub>
+                                    X d<sub>2</sub>
+                                </p>
+                                <p>d<sub>1</sub>
+                                    = 16cm, d<sub>2</sub>
+                                    = 8cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="rhombusLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="rhombusLeft"
+                                    type="text"
+                                    placeholder="b"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
-                                <input id="rhombusRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="rhombusRight"
+                                    type="text"
+                                    placeholder="h"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnRhombus" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="btnRhombus"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
+                    <!-- // Card No 05 -->
                     <div id="pentagonBg" class="card w-full bg-base-100 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/pentagon.png" alt="Pentagon"/></figure>
                         <div class="card-body text-center">
@@ -111,16 +164,27 @@
                                 <p>p = 6cm, b = 10cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="pentagonLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="pentagonLeft"
+                                    type="text"
+                                    placeholder="b"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
-                                <input id="pentagonRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="pentagonRight"
+                                    type="text"
+                                    placeholder="h"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnPentagon" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="btnPentagon"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
+                    <!-- // Card No 06 -->
                     <div id="ellipseBg" class="card w-full bg-base-100 shadow-xl border pt-5">
                         <figure><img class="h-24" src="images/ellipse.png" alt="Ellipse"/></figure>
                         <div class="card-body text-center">
@@ -130,24 +194,34 @@
                                 <p>a = 10cm, b = 4cm</p>
                             </div>
                             <div class="flex my-3">
-                                <input id="ellipseLeft" type="text" placeholder="b" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="ellipseLeft"
+                                    type="text"
+                                    placeholder="b"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
-                                <input id="ellipseRight" type="text" placeholder="h" class="input input-bordered input-xs w-full max-w-xs" />
+                                <input
+                                    id="ellipseRight"
+                                    type="text"
+                                    placeholder="h"
+                                    class="input input-bordered input-xs w-full max-w-xs"/>
                                 <span class="mx-2">cm</span>
                             </div>
                             <div class="card-actions justify-end">
-                                <button id="btnEllipse" class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
+                                <button
+                                    id="btnEllipse"
+                                    class="btn btn-sm bg-sky-500 border-0 hover:bg-sky-700 w-full">Calculate</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- // Aria Calculate -->
                 <div class="w-full lg:w-[30%] my-6 rounded-lg mx-auto border">
                     <div class="text-center">
                         <h1 class="text-2xl font-bold underline py-3">Aria Calculate</h1>
                         <div class="overflow-x-auto">
                             <table class="table w-full">
-                              <tbody id="tableContainer" class="font-semibold">
-                              </tbody>
+                                <tbody id="tableContainer" class="font-semibold"></tbody>
                             </table>
                         </div>
                     </div>

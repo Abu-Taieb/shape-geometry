@@ -2,7 +2,7 @@
 document.getElementById('blog').addEventListener('click', function(){
     window.location.href = '/blog.html'
 })
-
+// Left Input Field Function 
 function inputLeftValue(inputLeft){
     const inputLeftField = document.getElementById(inputLeft);
     const inputLeftValue = inputLeftField.value;
@@ -12,8 +12,8 @@ function inputLeftValue(inputLeft){
         return false;
     }
     return inputLeftValueStrToInt;
-
 }
+// Right Input Field Function 
 function inputRightValue(inputRight){
     const inputRightField = document.getElementById(inputRight);
     const inputRightValue = inputRightField.value;
@@ -24,7 +24,6 @@ function inputRightValue(inputRight){
         return false;
     }
     return inputRightValueStrToInt;
-
 }
 
 let serial = 0;
@@ -211,32 +210,32 @@ function createElementData(serial, getHeaderName, result) {
     getTable.appendChild(tr)
 }
 
-// random background color
+// Triangle Card random background color
 document.getElementById('triangleBg').addEventListener('mouseover', function triangleBg(){
     let triangleBg = Math.round(Math.random() * 1000000); 
     document.getElementById('triangleBg').style.background = '#'+ triangleBg;
 })
-
+// Rectangle Card random background color
 document.getElementById('rectangleBg').addEventListener('mouseover', function rectangleBg(){
     let rectangleBg = Math.round(Math.random() * 1000000); 
     document.getElementById('rectangleBg').style.background = '#'+ rectangleBg;
 })
-
+// Parallelogram Card random background color
 document.getElementById('parallelogramBg').addEventListener('mouseover', function parallelogramBg(){
     let parallelogramBg = Math.round(Math.random() * 1000000); 
     document.getElementById('parallelogramBg').style.background = '#'+ parallelogramBg;
 })
-
+// Rhombus Card random background color
 document.getElementById('rhombusBg').addEventListener('mouseover', function rhombusBg(){
     let rhombusBg = Math.round(Math.random() * 1000000); 
     document.getElementById('rhombusBg').style.background = '#'+ rhombusBg;
 })
-
+// Pentagon Card random background color
 document.getElementById('pentagonBg').addEventListener('mouseover', function pentagonBg(){
     let pentagonBg = Math.round(Math.random() * 1000000); 
     document.getElementById('pentagonBg').style.background = '#'+ pentagonBg;
 })
-
+// Ellipse Card random background color
 document.getElementById('ellipseBg').addEventListener('mouseover', function ellipseBg(){
     let ellipseBg = Math.round(Math.random() * 1000000); 
     document.getElementById('ellipseBg').style.background = '#'+ ellipseBg;
