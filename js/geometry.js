@@ -210,33 +210,11 @@ function createElementData(serial, getHeaderName, result) {
     getTable.appendChild(tr)
 }
 
-// Triangle Card random background color
-document.getElementById('triangleBg').addEventListener('mouseover', function triangleBg(){
-    let triangleBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('triangleBg').style.background = '#'+ triangleBg;
-})
-// Rectangle Card random background color
-document.getElementById('rectangleBg').addEventListener('mouseover', function rectangleBg(){
-    let rectangleBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('rectangleBg').style.background = '#'+ rectangleBg;
-})
-// Parallelogram Card random background color
-document.getElementById('parallelogramBg').addEventListener('mouseover', function parallelogramBg(){
-    let parallelogramBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('parallelogramBg').style.background = '#'+ parallelogramBg;
-})
-// Rhombus Card random background color
-document.getElementById('rhombusBg').addEventListener('mouseover', function rhombusBg(){
-    let rhombusBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('rhombusBg').style.background = '#'+ rhombusBg;
-})
-// Pentagon Card random background color
-document.getElementById('pentagonBg').addEventListener('mouseover', function pentagonBg(){
-    let pentagonBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('pentagonBg').style.background = '#'+ pentagonBg;
-})
-// Ellipse Card random background color
-document.getElementById('ellipseBg').addEventListener('mouseover', function ellipseBg(){
-    let ellipseBg = Math.round(Math.random() * 1000000); 
-    document.getElementById('ellipseBg').style.background = '#'+ ellipseBg;
+// Random Background Color
+document.getElementById('rectangleBg').addEventListener('mouseover', function(){
+    const card = document.getElementsByClassName('card');
+    for(const change of card){
+        backgroundColor = Math.round(Math.random() * 1000000); 
+        change.style.background = '#'+ backgroundColor;
+    }
 })
